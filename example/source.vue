@@ -2,6 +2,10 @@
  <h1>{{ msg }}</h1>
 </template>
 
+<template-native>
+  <label>{{ msg }}</label>
+</template-native>
+
 <script>
 export default {
   data () {
