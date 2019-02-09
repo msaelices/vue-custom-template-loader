@@ -28,6 +28,7 @@
     "babel-loader": "7.1.4",
     "babel-preset-env": "1.6.1",
     "conventional-changelog-cli": "^1.3.22",
+    "cross-env": "^5.2.0",
     "css-loader": "1.0.0",
     "vue": "^2.5.16",
     "vue-loader": "file:../../vue-loader",
@@ -41,7 +42,8 @@
   },
   "scripts": {
     "build": "webpack --config example/webpack.config.js --hide-modules",
-    "dev": "webpack-dev-server --config example/webpack.config.js --inline --hot",
+    "dev:web": "cross-env TARGET=web webpack-dev-server --config example/webpack.config.js --inline --hot",
+    "dev:native": "cross-env TARGET=native webpack-dev-server --config example/webpack.config.js --inline --hot",
     "version": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s"
   }
 }
