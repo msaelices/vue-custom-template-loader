@@ -1,9 +1,9 @@
 # vue-custom-template-loader
-📦 Webpack loader for rendering multiples templates with `vue-loader` in Vue.js components
+📦 Webpack loader for rendering multiples templates with [vue-loader](https://vue-loader.vuejs.org/) in Vue.js components
 
 ## What Vue Custom Template Loader does?
 
-It allows you to use several custom templates in your Single-File Components (SFCs), which will be rendered depending on some conditions.
+It allows you to use several templates in your Single-File Components (SFCs), which will be rendered depending on some conditions. This is possible thanks to the [custom blocks](https://vue-loader.vuejs.org/guide/custom-blocks.html) feature in `vue-loader`.
 
 It would be useful, for example, if you are sharing code for both Native Mobile Apps with [NativeScript-vue](http://nativescript-vue.org) and regular Web apps.
 
@@ -96,3 +96,7 @@ To this:
     "serve:native": "cross-env TARGET=native vue-cli-service serve",
     ...
 ```
+
+## Code example
+
+If you want to see a working sample, please review the `example/` directory on this repository.
