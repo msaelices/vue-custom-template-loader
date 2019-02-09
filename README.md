@@ -33,7 +33,7 @@ The idea is render `<template>` only when the app target is a web browser and `<
 
 For doing that, we only have to change the `webpack.config.js` file using the `vue-custom-template-loader` loader:
 
-```
+```javascript
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
@@ -75,7 +75,7 @@ module.exports = {
 
 Finally, in order to send the correct `TARGET` environment variable, we should change the default `serve` NPM script created by `vue-cli` in the `package.json` from this:
 
-```
+```json
   "scripts": {
     "serve": "vue-cli-service serve",
     ...
@@ -83,7 +83,7 @@ Finally, in order to send the correct `TARGET` environment variable, we should c
 
 To this:
 
-```
+```json
   "scripts": {
     "serve:web": "cross-env TARGET=web vue-cli-service serve",
     "serve:native": "cross-env TARGET=native vue-cli-service serve",
