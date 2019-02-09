@@ -31,7 +31,15 @@ export default {
 
 The idea is render `<template>` only when the app target is a web browser and `<template-native>` when the target is a native mobile app.
 
-For doing that, we only have to change the `webpack.config.js` file using the `vue-custom-template-loader` loader:
+## Setup
+
+First, you need to install the loader in your app:
+
+```bash
+npm install vue-custom-template-loader --save-dev
+```
+
+Now we have to change the `webpack.config.js` file using the `vue-custom-template-loader` loader:
 
 ```javascript
 const path = require('path')
@@ -41,7 +49,6 @@ module.exports = {
   ... # stuff
   module: {
     rules: [
-      // { loader: require.resolve('./debugger') },
       {
         test: /\.vue$/,
         loader: 'vue-loader'
