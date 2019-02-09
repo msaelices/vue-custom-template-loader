@@ -5,7 +5,13 @@ module.exports = function (source, map) {
   // hack to be able to call templateLoader function
   // which expect a resourceQuery data
   const loaderContext = {
-    resourceQuery: ''
+    resourceQuery: '',
+    emitError: console.error,
+    query: {
+      compilerOptions: {
+        outputSourceRange: false
+      }
+    }
   }
   const loader = templateLoader.bind(loaderContext)
 
