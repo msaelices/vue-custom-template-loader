@@ -31,11 +31,14 @@ module.exports = {
           'css-loader'
         ]
       },
-      // this rule applies to <template-native> blocks
+      // this rule applies to <template-native> blocks when TARGET is 'native'
       {
-        resourceQuery: /blockType=template-native/,
-        loader: 'vue-custom-template-loader'
-      },
+        loader: 'vue-custom-template-loader',
+        resourceQuery: (query) => {
+          let regex = /blockType=template-native/
+          return query.match(regex) && process.env.TARGET === 'native'
+        }
+      }
     ]
   },
   resolveLoader: {
