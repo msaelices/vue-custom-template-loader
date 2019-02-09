@@ -11,7 +11,7 @@ See this `HelloWorld.vue` example:
 
 ``` vue
 <template>
-  <div class="example">{{ msg }}</div>
+  <div>{{ msg }}</div>
 </template>
 
 <template-native>
